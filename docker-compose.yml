@@ -1,0 +1,19 @@
+services:
+  nsfw-server:
+    build:
+      context: .
+    container_name: nsfw-server
+    volumes:
+      - hf_cache:/root/.cache/huggingface
+    ports:
+      - "8001:8001"
+    networks:
+      - rabbitmq_network_geo
+
+volumes:
+  hf_cache:
+
+
+networks:
+  rabbitmq_network_geo:
+    external: true
