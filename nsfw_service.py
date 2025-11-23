@@ -6,7 +6,7 @@ import io
 
 app = FastAPI(title="NSFW Image Classification")
 
-print("🔄 Завантаження моделі...")
+print("Завантаження моделі...")
 classifier = pipeline(
     "image-classification",
     model="Falconsai/nsfw_image_detection"
